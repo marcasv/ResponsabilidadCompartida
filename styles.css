@@ -1,0 +1,289 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f5f5f5;
+  line-height: 1.6;
+}
+
+/* Encabezado general */
+header {
+  background-color: #003366; /* Azul oscuro */
+  color: white;
+  padding: 30px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header h1 {
+  font-size: 30px;
+  margin: 0;
+}
+
+nav {
+  background-color: #e6f2ff; /* Azul claro */
+  display: flex;
+  justify-content: center;
+  padding: 10px 0;
+  border-bottom: 2px solid #c1d9e9; /* Azul más claro */
+}
+
+nav a {
+  color: #003366; /* Azul oscuro */
+  text-decoration: none;
+  font-size: 16px;
+  margin: 0 20px;
+  font-weight: bold;
+}
+
+nav a:hover {
+  color: #005b99; /* Azul intermedio para hover */
+}
+
+.main-title {
+  background-color: #f5f5f5;
+  text-align: center;
+  padding: 20px 0;
+  font-size: 24px;
+  color: #003366;
+  font-weight: bold;
+}
+
+.main-content {
+  max-width: 900px;
+  margin: 20px auto;
+  background: white;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+.main-content img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.main-content h2 {
+  color: #003366;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.main-content p {
+  color: #333;
+  margin: 10px 0;
+  text-align: justify;
+}
+
+.main-content ul {
+  list-style-type: disc;
+  padding-left: 40px;
+}
+
+.navbar-item {
+  text-align: center;
+  padding: 10px;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.navbar-item:hover {
+  background-color: #eaeaea;
+  cursor: pointer;
+}
+
+/* Estilos para el carrusel */
+.carousel {
+  position: relative;
+  max-width: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+  height: 400px; /* Define una altura específica para el carrusel */
+  border-radius: 10px;
+}
+
+/* Contenedor de las imágenes del carrusel */
+.carousel-images {
+  display: flex;
+  transition: transform 0.5s ease;
+  width: 100%;
+}
+
+/* Estilos de cada imagen dentro del carrusel */
+.carousel-images img {
+  flex-shrink: 0; /* Asegura que las imágenes no se encojan */
+  width: 100%; /* Asegura que las imágenes ocupen todo el ancho del contenedor */
+  height: 100%; /* Hace que las imágenes ocupen toda la altura del contenedor */
+  object-fit: cover; /* Mantiene la proporción sin distorsionar y cubre el área */
+  border-radius: 10px;
+  display: block; /* Elimina el espacio debajo de la imagen */
+}
+
+/* Estilos de los botones de navegación */
+.carousel-button {
+  position: absolute;
+  top: 50%;
+  z-index: 10;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  transform: translateY(-50%);
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+
+
+
+/* Estilo para las secciones de texto */
+.main-content section {
+  margin-bottom: 20px;
+}
+
+.main-content section h3 {
+  color: #003366;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.main-content section p {
+  color: #333;
+  font-size: 16px;
+  text-align: justify;
+}
+
+/* Contenedor de las tarjetas */
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+/* Estilo para cada tarjeta */
+.card {
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Efecto al pasar el mouse sobre las tarjetas */
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* Títulos dentro de las tarjetas */
+.card h3 {
+  color: #003366;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+/* Texto dentro de las tarjetas */
+.card p {
+  color: #333;
+  font-size: 16px;
+  text-align: justify;
+}
+
+.actions-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.action-card {
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  transition: background-color 0.3s ease;
+}
+
+.action-card h3 {
+  color: #003366;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.action-card p {
+  font-size: 14px;
+  color: #666;
+  line-height: 1.6;
+}
+
+.action-card:hover {
+  background-color: #e6f2ff;
+  cursor: pointer;
+}
+
+.author-reflection {
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin: 20px 0;
+  border-radius: 10px;
+}
+
+.author-reflection h2 {
+  color: #003366;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.author-reflection p {
+  font-size: 14px;
+  color: #666;
+  line-height: 1.6;
+}
+
+footer {
+  text-align: center;
+  margin-top: 20px;
+  background-color: #003366;
+  color: white;
+  padding: 10px 0;
+}
+
+.source-info ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.source-info li {
+  font-size: 14px;
+  color: #666;
+  line-height: 1.6;
+}
+
+.source-info a {
+  color: #003366;
+  text-decoration: none;
+}
+
+.source-info a:hover {
+  text-decoration: underline;
+}
+
+footer {
+  text-align: center;
+  margin-top: 20px;
+  background-color: #003366;
+  color: white;
+  padding: 10px 0;
+}

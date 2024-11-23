@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Problemática Identificada</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Encabezado -->
+    <header>
+      <h1>RESPONSABILIDAD COMPARTIDA</h1>
+    </header>
+
+    <!-- Navegador -->
+    <nav class="navbar">
+      <a href="index.html" class="navbar-item">Sobre los autores</a>
+      <a href="desigualdad-genero.html" class="navbar-item">Un poco de contexto</a>
+      <a href="problematica.html" class="navbar-item">Problemática identificada</a>
+      <a href="proposito-propuesta.html" class="navbar-item">Propósito de la propuesta</a>
+      <a href="reflexiones-autores.html" class="navbar-item">Reflexiones de los autores</a>
+      <a href="fuentes-informacion.html" class="navbar-item">Fuentes de información</a>
+    </nav>
+
+    <!-- Título principal -->
+    <div class="main-title">Problemática Identificada</div>
+
+    <!-- Contenido principal -->
+    <main class="main-content">
+      <!-- Carrusel de imágenes -->
+      <div class="carousel">
+        <div class="carousel-images">
+          <img
+            src="https://vanguardia.com.mx/binrepository/1200x799/0c0/0d0/none/11604/GGGC/trabajo_mujeres_VG3041604_MG3536481.jpg"
+            alt="Imagen 1"
+          />
+          <img
+            src="https://www.urbanopuebla.com.mx/wp-content/uploads/2023/07/personas-6.jpg"
+            alt="Imagen 2"
+          />
+          <img
+            src="https://movimientociudadano.mx/storage/news/img.jpg"
+            alt="Imagen 3"
+          />
+          <img
+            src="https://www.lacapital.com.mx/files/news/trabajadoras-domesticas-remuneradas-_595_444_3526.jpg"
+            alt="Imagen 4"
+          />
+        </div>
+        <button class="carousel-button prev" onclick="moveSlide(-1)">
+          &#10094;
+        </button>
+        <button class="carousel-button next" onclick="moveSlide(1)">
+          &#10095;
+        </button>
+      </div>
+
+      <h2>Qué se quiere resolver:</h2>
+      <p>
+        La carga desproporcionada en el hogar sobre las mujeres es un problema
+        de equidad de género que se busca resolver por varias razones clave:
+      </p>
+
+      <!-- Tarjetas para cada sección -->
+      <div class="cards-container">
+        <div class="card">
+          <h3>1. Igualdad de oportunidades</h3>
+          <p>
+            Al aliviar la carga desproporcionada del trabajo doméstico, las
+            mujeres pueden acceder a las mismas oportunidades de desarrollo
+            personal, profesional y económico que los hombres. Muchas mujeres
+            enfrentan barreras para avanzar en sus carreras debido al tiempo y
+            energía que destinan a las tareas domésticas y al cuidado de otros.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>2. Bienestar y salud mental</h3>
+          <p>
+            La sobrecarga en el hogar afecta negativamente la salud física y
+            mental de las mujeres, generando agotamiento, estrés y, en muchos
+            casos, depresión. El objetivo es promover una distribución más justa
+            de las responsabilidades para mejorar el bienestar de las mujeres y
+            evitar el desgaste emocional.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>3. Reducción de la brecha de género</h3>
+          <p>
+            Esta carga adicional contribuye a la desigualdad económica entre
+            hombres y mujeres. Al redistribuir las tareas del hogar de manera
+            equitativa, se busca reducir la brecha salarial de género y los
+            efectos de la "doble jornada" (trabajo remunerado más trabajo
+            doméstico no remunerado).
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>4. Cambio cultural y social</h3>
+          <p>
+            Redistribuir las tareas en el hogar promueve una cultura de
+            corresponsabilidad y una visión igualitaria de género, transmitiendo
+            valores de equidad a las nuevas generaciones. Con este cambio
+            cultural, se fomenta una sociedad en la que tanto hombres como
+            mujeres valoren y asuman las tareas domésticas como una
+            responsabilidad compartida.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>5. Calidad de vida para toda la familia</h3>
+          <p>
+            Al involucrar a todos los miembros del hogar en las tareas
+            domésticas, no solo se reduce la carga de una sola persona, sino que
+            se fomenta la colaboración y el trabajo en equipo, mejorando la
+            dinámica familiar y creando un ambiente de respeto y apoyo.
+          </p>
+        </div>
+      </div>
+
+      <p>
+        En general, resolver esta carga desproporcionada apunta a mejorar la
+        equidad de género, la justicia social, la salud y el bienestar de las
+        mujeres y sus familias.
+      </p>
+    </main>
+
+    <footer>
+      <p>&copy; 2024 | Responsabilidad compartida</p>
+    </footer>
+
+    <script>
+      let currentIndex = 0;
+
+      function moveSlide(step) {
+        const slides = document.querySelectorAll(".carousel-images img");
+        currentIndex = (currentIndex + step + slides.length) % slides.length;
+        const offset = -currentIndex * 100;
+        document.querySelector(
+          ".carousel-images"
+        ).style.transform = `translateX(${offset}%)`;
+      }
+    </script>
+  </body>
+</html>

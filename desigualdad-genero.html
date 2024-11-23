@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Un poco de contexto</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Encabezado -->
+    <header>
+      <h1>RESPONSABILIDAD COMPARTIDA</h1>
+    </header>
+
+    <!-- Navegador -->
+    <nav class="navbar">
+      <a href="index.html" class="navbar-item">Sobre los autores</a>
+      <a href="desigualdad-genero.html" class="navbar-item">Un poco de contexto</a>
+      <a href="problematica.html" class="navbar-item">Problemática identificada</a>
+      <a href="proposito-propuesta.html" class="navbar-item">Propósito de la propuesta</a>
+      <a href="reflexiones-autores.html" class="navbar-item">Reflexiones de los autores</a>
+      <a href="fuentes-informacion.html" class="navbar-item">Fuentes de información</a>
+    </nav>
+
+    <!-- Título principal -->
+    <div class="main-title">Un poco de contexto</div>
+
+    <!-- Contenido principal -->
+    <main class="main-content">
+      <div class="carousel">
+        <div class="carousel-images">
+          <img
+            src="https://movimientociudadano.mx/storage/news/img.jpg"
+            alt="Imagen 1"
+          />
+          <img
+            src="https://www.urbanopuebla.com.mx/wp-content/uploads/2023/07/personas-6.jpg"
+            alt="Imagen 2"
+          />
+          <img
+            src="https://www.lacapital.com.mx/files/news/trabajadoras-domesticas-remuneradas-_595_444_3526.jpg"
+            alt="Imagen 3"
+          />
+          <img
+            src="https://vanguardia.com.mx/binrepository/1200x799/0c0/0d0/none/11604/GGGC/trabajo_mujeres_VG3041604_MG3536481.jpg"
+            alt="Imagen 4"
+          />
+        </div>
+        <button class="carousel-button prev" onclick="moveSlide(-1)">
+          &#10094;
+        </button>
+        <button class="carousel-button next" onclick="moveSlide(1)">
+          &#10095;
+        </button>
+      </div>
+      <h2>Un poco de contexto</h2>
+      <p>
+        En cuanto a temas de género, una de las problemáticas sociales que
+        enfrentamos hoy en día, pese a la difusión de igualdad de género, es la
+        desproporcionalidad o falta de responsabilidad compartida en los
+        hogares. En este entendido, el fenómeno afecta a las mujeres, ya que,
+        independientemente de su participación en el medio laboral, asumen la
+        mayor parte de las tareas del hogar, así como el cuidado de los hijos.
+        Esto limita el tiempo y espacio para el desarrollo personal o
+        profesional.
+      </p>
+      <p>
+        Derivado de lo anterior, esta situación repercute a nivel individual,
+        social y económico, perpetuando la desigualdad de género y afectando la
+        productividad general.
+      </p>
+      <h2>Datos relevantes</h2>
+      <p>
+        Según datos del Instituto Nacional de Estadística y Geografía (INEGI),
+        en México se detalla que:
+      </p>
+      <ul>
+        <li>
+          Las mujeres dedican en promedio 27.1 horas a la semana a actividades
+          del hogar, como limpieza, cocina y cuidado de los hijos.
+        </li>
+        <li>
+          Los hombres, en cambio, dedican apenas 10.3 horas a estas tareas.
+        </li>
+      </ul>
+      <h2>Lo que encontrarás aquí</h2>
+      <p>
+        En este blog, exploraremos las principales causas, factores y, sobre
+        todo, métodos preventivos para ayudar a reducir conductas que perpetúan
+        la desigualdad de género en el hogar.
+      </p>
+    </main>
+
+    <footer>
+      <p>&copy; 2024 | Responsabilidad compartida</p>
+    </footer>
+
+    <script>
+      let currentIndex = 0;
+
+      function moveSlide(step) {
+        const slides = document.querySelectorAll(".carousel-images img");
+        currentIndex = (currentIndex + step + slides.length) % slides.length;
+        const offset = -currentIndex * 100;
+        document.querySelector(
+          ".carousel-images"
+        ).style.transform = `translateX(${offset}%)`;
+      }
+    </script>
+  </body>
+</html>
